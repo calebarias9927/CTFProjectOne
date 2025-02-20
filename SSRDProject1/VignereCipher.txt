@@ -1,0 +1,20 @@
+Vigenère Cipher Challenge
+
+
+Details
+difficulty: Easy
+category: Cryptography
+flags: flag{YouWin}
+
+Description:
+Your mission: decode a mysterious message, htpn{CfwExu}, to uncover a hidden flag.
+But don't worry—you've got the key! Can you figure out how to use it to unlock the message?
+
+Deployment:
+The players should not get any additional files.
+
+Soultion:
+To decrypt the Vigenère Cipher, we will require a key. We will use cipher as a key.
+The Vigenère Cipher works by replacing each letter in the plaintext with its corresponding
+letter in the key. We can use any online decoder on Vigenère Cipher for this challenge.
+The flag is gained after the key and encrypted text decoded into: flag{YouWin}

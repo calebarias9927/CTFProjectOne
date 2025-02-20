@@ -1,0 +1,16 @@
+---
+name: "name-challangename"
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        - FLAG=victf{0123456789ABCDEF}
+    ports:
+      - 8101:80
+    networks:
+      - challangename_net
+
+networks:
+  challangename_net:

@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: sqlinjectctf-web-1
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    volumes:
+      - ./src:/var/www/html
+
+  db:
+    image: mysql:5.7
+    container_name: sqlinjectctf-db-1
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootroot
+      MYSQL_DATABASE: sqli_ctf
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3307:3306"
